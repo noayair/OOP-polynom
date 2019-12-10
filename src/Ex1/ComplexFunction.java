@@ -13,15 +13,10 @@ public class ComplexFunction implements function {//hhh
         this.right = null;
     }
 
-    public ComplexFunction(function f1, Operation op, function f2) {
+    public ComplexFunction(Operation op, function f1, function f2) {
         this.left=f1;
         this.op=op;
         this.right=f2;
-    }
-    public ComplexFunction(){
-        this.left=null;
-        this.right=null;
-        this.op=null;
     }
     public void set_OP(Operation op) {
         this.op=op;
@@ -91,22 +86,23 @@ public class ComplexFunction implements function {//hhh
             int start = s.indexOf("(");
             int end = s.length() - 1;
             int psik = findPsik(s);
-            this.op = Op(s.substring(0, start));
+
+            Operation op = Op(s.substring(0, start));
             // left side
+            function left;
             if (isCf(s.substring(start + 1, psik))) {
-                this.left = new ComplexFunction();
-                this.left.initFromString(s.substring(start + 1, psik));
+                left = this.initFromString(s.substring(start + 1, psik));
             } else {
-                this.left = new Polynom(s.substring(start + 1, psik));
+                left = new Polynom(s.substring(start + 1, psik));
             }
             //right side
+            function right;
             if (isCf(s.substring(psik + 1, end))) {
-                this.right = new ComplexFunction();
-                this.right.initFromString(s.substring(psik + 1, end));
+                right = this.initFromString(s.substring(psik + 1, end));
             } else {
-                this.right = new Polynom(s.substring(psik + 1, end));
+                right = new Polynom(s.substring(psik + 1, end));
             }
-            return this;
+            return new ComplexFunction(op, left, right);
         }
     }
 
@@ -136,13 +132,17 @@ public class ComplexFunction implements function {//hhh
     }
 
     public String toString(){
+        if(this.op == Operation.None){
+            return left.toString();
+        }
         String s="";
-        s+= this.op + "(" + this.left + "," + this.right + ")";
+        String o = OpToString(this.op);
+        s+= o + "(" + this.left + "," + this.right + ")";
         return s;
     }
 
     public function copy() {
-        ComplexFunction cf=new ComplexFunction();
+        ComplexFunction cf=new ComplexFunction(new Monom(0,0));
         cf.right = this.right;
         cf.left = this.left;
         cf.op = this.op;
@@ -157,41 +157,41 @@ public class ComplexFunction implements function {//hhh
     }
 
     public void plus(function f1){
-        ComplexFunction left= new ComplexFunction(this.left, this.op, this.right);
+        ComplexFunction left= new ComplexFunction(this.op, this.left, this.right);
         this.op = Operation.Plus;
         this.left=left;
         this.right=f1;
     }
     public void mul(function f1){
-        ComplexFunction left= new ComplexFunction(this.left, this.op, this.right);
+        ComplexFunction left= new ComplexFunction(this.op, this.left, this.right);
         this.op = Operation.Times;
         this.left=left;
         this.right=f1;
     }
 
     public void div(function f1){
-        ComplexFunction left= new ComplexFunction(this.left, this.op, this.right);
+        ComplexFunction left= new ComplexFunction(this.op, this.left, this.right);
         this.op = Operation.Divid;
         this.left=left;
         this.right=f1;
     }
 
     public void max(function f1){
-        ComplexFunction left= new ComplexFunction(this.left, this.op, this.right);
+        ComplexFunction left= new ComplexFunction(this.op, this.left, this.right);
         this.op = Operation.Max;
         this.left=left;
         this.right=f1;
     }
 
     public void min(function f1){
-        ComplexFunction left= new ComplexFunction(this.left, this.op, this.right);
+        ComplexFunction left= new ComplexFunction(this.op, this.left, this.right);
         this.op = Operation.Min;
         this.left=left;
         this.right=f1;
     }
 
     public void comp(function f1){
-        ComplexFunction left= new ComplexFunction(this.left, this.op, this.right);
+        ComplexFunction left= new ComplexFunction(this.op, this.left, this.right);
         this.op = Operation.Comp;
         this.left=left;
         this.right=f1;
@@ -220,6 +220,25 @@ public class ComplexFunction implements function {//hhh
                 return op.Comp;
             default:
                 return op.Error;
+        }
+    }
+
+    public String OpToString(Operation op) {
+        switch (op) {
+            case Plus:
+                return "plus";
+            case Times:
+                return "mul";
+            case Divid:
+                return "div";
+            case Max:
+                return "max";
+            case Min:
+                return "min";
+            case Comp:
+                return "comp";
+            default:
+                throw new IllegalStateException("Unexpected value: " + op);
         }
     }
 }

@@ -139,6 +139,7 @@ public class Monom implements function{
 	 *
 	 */
 	public boolean equals(Object o) {
+		if(o instanceof ComplexFunction ) return o.equals(this);
 		if (!(o instanceof Monom)) return  false;
 		Monom m = (Monom) o;
 		if (m.get_power() != this.get_power()) return false;

@@ -30,6 +30,7 @@ public class Polynom implements Polynom_able{
 	 * @param s - string that we convert to polynom
 	 */
 	public Polynom(String s) {
+		s = s.replaceAll(" " , "");
 		int j = 0;
 		LinkedList<Monom> list = new LinkedList<Monom>();
 		for (int i = 0; i < s.length();) { // create a new linkedlist of monoms
@@ -172,6 +173,7 @@ public class Polynom implements Polynom_able{
 	 */
 	@Override
 	public boolean equals(Object o) {
+		if(o instanceof ComplexFunction ) return o.equals(this);
 		if (!(o instanceof Polynom_able)) return  false;
 		Polynom p1 = (Polynom) o;
 		Iterator<Monom> runner = this.theList.iterator();
