@@ -15,15 +15,7 @@ public class ComplexFunction implements function {//hhh
         this.op=op;
         this.right=f2;
     }
-    public void set_OP(Operation op) {
-        this.op=op;
-    }
-    public void set_right(function right) {
-        this.right=right;
-    }
-    public void set_left(function left) {
-        this.left=left;
-    }
+
     public ComplexFunction(String op , function f1 , function f2) {
         this.left = f1;
         this.right = f2;
@@ -49,6 +41,17 @@ public class ComplexFunction implements function {//hhh
             default:
                 throw new IllegalStateException("Unexpected value: " + op);
         }
+    }
+    public void set_OP(Operation op) {
+        this.op=op;
+    }
+
+    public void set_right(function right) {
+        this.right=right;
+    }
+
+    public void set_left(function left) {
+        this.left=left;
     }
 
     public Operation getOp() {

@@ -39,7 +39,7 @@ public class Functions_GUI implements functions {
             writer.append(s + "\n");
             writer.close();
         }
-        this.List.clear();
+        //this.List.clear();
         }
 
     @Override
