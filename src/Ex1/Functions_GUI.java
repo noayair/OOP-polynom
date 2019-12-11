@@ -1,4 +1,5 @@
 package Ex1;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,44 +10,24 @@ import java.io.*;
 
 public class Functions_GUI implements functions {
     public LinkedList<function> List;
-    static ComplexFunction f = new ComplexFunction(new Monom(0,0));
+    private ComplexFunction f = new ComplexFunction(new Monom(0,0));
+    public static Color[] Colors = {Color.blue, Color.cyan,
+            Color.MAGENTA, Color.ORANGE, Color.red, Color.GREEN, Color.PINK};
 
     public Functions_GUI (){
         this.List = new LinkedList<function>();
     }
     @Override
     public void initFromFile(String file) throws IOException {
-        //this.List.clear();
-        /*
-        java.util.List<String> sList = null;
-
-        try {
-            sList = Files.readAllLines(Paths.get(file));
-        } catch (Exception e){
-
+        String line;
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        while ((line = reader.readLine()) != null) {
+            //System.out.println(line);
+            function f = new ComplexFunction(new Monom(0,0));
+            f = f.initFromString(line);
+            add(f);
         }
         this.List.clear();
-        for (int i = 0; i < sList.size(); i++) {
-            this.List.add(f.initFromString(sList.get(i)));
-        }
-        */
-        File ourFile = new File(file);
-        Scanner scan = new Scanner(ourFile);
-        String s ="";
-        while(scan.hasNext()){
-            s=scan.nextLine();
-                this.List.add(f.initFromString(s));
-        }
-
-
-//        String line;
-//        BufferedReader reader = new BufferedReader(new FileReader(file));
-//        while ((line = reader.readLine()) != null) {
-//            System.out.println(line);
-//            function f = (function) new ComplexFunction(new Monom(0,0));
-//            f = f.initFromString(line);
-//            add(f);
-//        }
     }
 
     @Override
@@ -58,17 +39,60 @@ public class Functions_GUI implements functions {
             writer.append(s + "\n");
             writer.close();
         }
+        this.List.clear();
         }
-
-//        File ourFile = new File(file);
-//        Iterator it = List.listIterator();
-//        while(it.hasNext()){
-//
-//        }
 
     @Override
     public void drawFunctions(int width, int height, Range rx, Range ry, int resolution) {
+        //int n = resolution;
+        StdDraw.setCanvasSize(width, height);
+        int size = this.List.size();
+        double[] x = new double[resolution+1];
+        double[][] yy = new double[size][resolution+1];
+        double x_step = (rx.get_max()-rx.get_min())/resolution;
+        double x0 = rx.get_min();
+        for (int i=0; i<=resolution; i++) {
+            x[i] = x0;
+            for(int a=0;a<size;a++) {
+                yy[a][i] = this.List.get(a).f(x[i]);
+            }
+            x0+=x_step;
+        }
+        StdDraw.setXscale(rx.get_min(), rx.get_max());
+        StdDraw.setYscale(ry.get_min(), ry.get_max());
 
+
+        // plot the approximation to the function
+        for(int a=0;a<size;a++) {
+            int c = a%Colors.length;
+            StdDraw.setPenColor(Colors[c]);
+
+            System.out.println(a+") "+Colors[a]+"  f(x)= "+this.List.get(a));
+            for (int i = 0; i < resolution; i++) {
+                StdDraw.line(x[i], yy[a][i], x[i+1], yy[a][i+1]);
+            }
+        }
+        StdDraw.setPenColor(Color.LIGHT_GRAY);
+        for(double d = ry.get_min(); d < ry.get_max(); d++){
+            StdDraw.line(rx.get_min() , d , rx.get_max() , d);
+        }
+        for(double d = rx.get_min(); d < rx.get_max(); d++){
+            StdDraw.line(d , ry.get_min() , d , ry.get_max());
+        }
+        StdDraw.setPenColor(Color.BLACK);
+        StdDraw.setPenRadius(0.005);
+        StdDraw.line(0 , ry.get_max() , 0 , ry.get_min());
+        StdDraw.line(rx.get_max() , 0 , rx.get_min() , 0);
+        StdDraw.setPenRadius(0.010);
+        String s = "";
+        for(int i = (int)ry.get_min(); i < ry.get_max(); i++){
+            s = "" + i;
+            StdDraw.text(-0.5 , i , s);
+        }
+        for(int i = (int)rx.get_min(); i < rx.get_max(); i++){
+            s = "" + i;
+            StdDraw.text(i , -0.5 , s);
+        }
     }
 
     @Override

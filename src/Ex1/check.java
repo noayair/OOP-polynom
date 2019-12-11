@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class check {
+    public static final Range RX=new Range(-10,10);
+    public static final Range RY=new Range(-5,10);
 
     public static void main(String[] args)
     throws IOException
@@ -43,14 +45,15 @@ public class check {
        // LinkedList<function> List = new LinkedList();
         ComplexFunction cf = new ComplexFunction(new Monom(0,0));
         Functions_GUI fg = new Functions_GUI();
-        fg.add(new Polynom("2x+3x^2"));
-        fg.add(new ComplexFunction(cf.initFromString("plus(2x,3)")));
-        fg.saveToFile("blabla.txt"); // "/Users/Yair/Desktop/function_file.txt"
-        fg.initFromFile("blabla.txt");
-        Iterator<function> itr = fg.List.iterator();
-        while(itr.hasNext()){
-            System.out.println(itr.next().toString());
-        }
+//        fg.add(new Polynom("2x+3x^2"));
+//        fg.add(new ComplexFunction(cf.initFromString("plus(2x,3)")));
+        //fg.saveToFile("blabla.txt");
+        //fg.initFromFile("C:/Users/Yair/Desktop/function_file.txt");
+        fg.drawFunctions(1000,600,RX,RY,200);
+//        Iterator<function> itr = fg.List.iterator();
+//        while(itr.hasNext()){
+//            System.out.println(itr.next().toString());
+//        }
         //System.out.println(fg.toString());
     }
 

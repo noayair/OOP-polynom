@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5191437c-5cd8-4bc4-869b-dabb31c2929a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex1Testing/MonomTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP-Polynom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP-Polynom.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Monom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Monom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Polynom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/check.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,17 +14,38 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UnbYE5w21HPV97ztUsXMGdNGty" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Ex1Testing" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Yair\IdeaProjects\OOP-Polynom\src\Ex1" />
     </key>
@@ -43,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.check">
+  <component name="RunManager" selected="JUnit.PolynomTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="OOP-Polynom" />
@@ -67,12 +86,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MonomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOP-Polynom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolynomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOP-Polynom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.PolynomTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.check" />
+      <item itemvalue="JUnit.MonomTest" />
+      <item itemvalue="JUnit.PolynomTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PolynomTest" />
+        <item itemvalue="JUnit.MonomTest" />
         <item itemvalue="Application.check" />
       </list>
     </recent_temporary>
@@ -87,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575995351727</updated>
-      <workItem from="1575995356672" duration="12577000" />
+      <workItem from="1575995356672" duration="20878000" />
     </task>
     <servers />
   </component>
@@ -104,24 +157,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Ex1/Functions_GUI.java</url>
-          <line>17</line>
-          <properties class="Ex1.Functions_GUI" method="initFromFile">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Ex1/check.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
