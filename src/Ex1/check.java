@@ -48,8 +48,9 @@ public class check {
 //        fg.add(new Polynom("2x+3x^2"));
 //        fg.add(new ComplexFunction(cf.initFromString("plus(2x,3)")));
         //fg.saveToFile("blabla.txt");
-        //fg.initFromFile("C:/Users/Yair/Desktop/function_file.txt");
-        fg.drawFunctions(1000,600,RX,RY,200);
+//        fg.initFromFile("C:/Users/Yair/Desktop/function_file.txt");
+//        fg.drawFunctions(1000,600,RX,RY,200);
+        fg.drawFunctions("C:/Users/Yair/Desktop/GUI_params (2).txt");
 //        Iterator<function> itr = fg.List.iterator();
 //        while(itr.hasNext()){
 //            System.out.println(itr.next().toString());

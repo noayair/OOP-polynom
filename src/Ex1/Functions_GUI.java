@@ -3,10 +3,9 @@ import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 import java.io.*;
+import com.google.gson.Gson;
 
 public class Functions_GUI implements functions {
     public LinkedList<function> List;
@@ -97,7 +96,17 @@ public class Functions_GUI implements functions {
 
     @Override
     public void drawFunctions(String json_file) {
-
+        Gson g = new Gson();
+        try {
+            FileReader our_file = new FileReader(json_file);
+            Parameters par = g.fromJson(our_file , Parameters.class);
+            Range rx = new Range(par.getRange_X()[0] , par.getRange_X()[1]);
+            Range ry = new Range(par.getRange_Y()[0] , par.getRange_Y()[1]);
+            drawFunctions(par.getWidth() , par.getHeight() , rx , ry , par.getResolution());
+        } catch (FileNotFoundException | IllegalArgumentException e) {
+            drawFunctions(2000 , 1000 , new Range(-15 , 15) , new Range(-15 , 15) , 1000);
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -122,12 +131,12 @@ public class Functions_GUI implements functions {
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        return this.List.toArray();
     }
 
     @Override
     public <T> T[] toArray(T[] ts) {
-        return null;
+        return  (T[]) this.List.toArray(ts);
     }
 
     @Override

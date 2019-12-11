@@ -4,9 +4,6 @@ public class ComplexFunction implements function {//hhh
     private function left;
     private function right;
 
-    public static void main(String[] args) {
-        System.out.println("bla");
-    }
     public ComplexFunction(function f){
         this.left = f;
         this.op = Operation.None;
@@ -59,7 +56,11 @@ public class ComplexFunction implements function {//hhh
                 case Plus:
                     return ((this.left.f(x)) + (this.right.f(x)));
                 case Divid:
-                    return ((this.left.f(x)) / (this.right.f(x)));
+//                    if(this.right.f(x) == 0) {
+//                        throw new IllegalStateException("0 cannot be divided");
+//                    }else {
+                        return ((this.left.f(x)) / (this.right.f(x)));
+//                    }
                 case Max:
                     return Math.max((this.left.f(x)), (this.right.f(x)));
                 case Min:

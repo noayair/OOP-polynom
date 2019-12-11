@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5191437c-5cd8-4bc4-869b-dabb31c2929a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ex1Testing/MonomTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex1/Parameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex1Testing/ComplexFunctionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OOP-Polynom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP-Polynom.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/check.java" afterDir="false" />
     </list>
@@ -17,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -38,6 +42,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gson-2.8.6.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -62,17 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PolynomTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="OOP-Polynom" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.check">
     <configuration name="check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex1.check" />
       <module name="OOP-Polynom" />
@@ -86,7 +84,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MonomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComplexFunctionTest.copy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOP-Polynom" />
       <extension name="coverage">
         <pattern>
@@ -95,13 +93,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
+      <option name="METHOD_NAME" value="copy" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PolynomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComplexFunctionTest.initFromString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOP-Polynom" />
       <extension name="coverage">
         <pattern>
@@ -110,23 +109,59 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.PolynomTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
+      <option name="METHOD_NAME" value="initFromString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComplexFunctionTest.plus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOP-Polynom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
+      <option name="METHOD_NAME" value="plus" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComplexFunctionTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOP-Polynom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
+      <option name="METHOD_NAME" value="testEquals" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ComplexFunctionTest.initFromString" />
+      <item itemvalue="JUnit.ComplexFunctionTest.copy" />
+      <item itemvalue="JUnit.ComplexFunctionTest.testEquals" />
+      <item itemvalue="JUnit.ComplexFunctionTest.plus" />
       <item itemvalue="Application.check" />
-      <item itemvalue="JUnit.MonomTest" />
-      <item itemvalue="JUnit.PolynomTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PolynomTest" />
-        <item itemvalue="JUnit.MonomTest" />
         <item itemvalue="Application.check" />
+        <item itemvalue="JUnit.ComplexFunctionTest.plus" />
+        <item itemvalue="JUnit.ComplexFunctionTest.testEquals" />
+        <item itemvalue="JUnit.ComplexFunctionTest.copy" />
+        <item itemvalue="JUnit.ComplexFunctionTest.initFromString" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575995351727</updated>
-      <workItem from="1575995356672" duration="20878000" />
+      <workItem from="1575995356672" duration="30768000" />
     </task>
     <servers />
   </component>
