@@ -6,6 +6,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ComplexFunctionTest {
+    static ComplexFunction empty = new ComplexFunction(new Monom(0,0));
+
 
     @Test
     public void f() {
@@ -21,9 +23,9 @@ public class ComplexFunctionTest {
 
     @Test
     public void initFromString() {
-        ComplexFunction cf1 = new ComplexFunction(new Monom(0,0));
-        ComplexFunction cf2 = new ComplexFunction(new Monom(0,0));
-        ComplexFunction cf3 = new ComplexFunction(new Monom(0,0));
+//        ComplexFunction cf1 = new ComplexFunction(new Monom(0,0));
+//        ComplexFunction cf2 = new ComplexFunction(new Monom(0,0));
+//        ComplexFunction cf3 = new ComplexFunction(new Monom(0,0));
         String s1 = "3+4x-5x^6";
         String s2 = "mul(1.4,5x+3x^2)";
         String s3 = "min(min(div(plus(x,2x^2),3x^3),4x^4),5x^5)";
@@ -32,9 +34,9 @@ public class ComplexFunctionTest {
         ComplexFunction c2 = new ComplexFunction(Operation.Divid , c1 , new Monom("3x^3"));
         ComplexFunction c3 = new ComplexFunction(Operation.Min , c2 , new Monom("4x^4"));
         ComplexFunction c4 = new ComplexFunction(Operation.Min , c3 , new Monom("5x^5"));
-        assertEquals(new ComplexFunction(Operation.None , new Polynom(s1) , null) , cf1.initFromString(s1));
-        assertEquals(new ComplexFunction(Operation.Times , new Monom("1.4") , new Polynom("5x+3x^2")) , cf2.initFromString(s2));
-        assertEquals(c4.toString() , cf3.initFromString(s3).toString());
+        assertEquals(new ComplexFunction(Operation.None , new Polynom(s1) , null) , empty.initFromString(s1));
+        assertEquals(new ComplexFunction(Operation.Times , new Monom("1.4") , new Polynom("5x+3x^2")) , empty.initFromString(s2));
+        assertEquals(c4.toString() , empty.initFromString(s3).toString());
     }
 
     @Test
@@ -55,41 +57,73 @@ public class ComplexFunctionTest {
 
     @Test
     public void plus() {
-        Monom m = new Monom("4x^5");
-        Polynom p = new Polynom("-5+44x");
-        ComplexFunction cf1 = new ComplexFunction(Operation.Times , m , p);
-        ComplexFunction cf2 = new ComplexFunction(Operation.None , p , null);
-        ComplexFunction cf3 = new ComplexFunction(new Monom(0,0));
-        cf3.plus(cf1);
+        ComplexFunction cf1 = new ComplexFunction(new Monom("4x^5"));
+        ComplexFunction cf2 = new ComplexFunction(new Polynom("-5+44x"));
+        ComplexFunction cf3 = new ComplexFunction(Operation.Comp , cf1 , new Polynom("8-x"));
+        cf1.plus(cf2);
         cf3.plus(cf2);
-        assertEquals(new ComplexFunction(Operation.Plus, cf1, cf2).toString() , cf3.toString());
+        assertEquals(Operation.Plus.toString() , cf1.getOp().toString());
+        assertEquals("plus(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
+        assertEquals("plus(comp(plus(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
     public void mul() {
+        ComplexFunction cf1 = new ComplexFunction(new Monom("4x^5"));
+        ComplexFunction cf2 = new ComplexFunction(new Polynom("-5+44x"));
+        ComplexFunction cf3 = new ComplexFunction(Operation.Comp , cf1 , new Polynom("8-x"));
+        cf1.mul(cf2);
+        cf3.mul(cf2);
+        assertEquals(Operation.Times.toString() , cf1.getOp().toString());
+        assertEquals("mul(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
+        assertEquals("mul(comp(mul(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
     public void div() {
+        ComplexFunction cf1 = new ComplexFunction(new Monom("4x^5"));
+        ComplexFunction cf2 = new ComplexFunction(new Polynom("-5+44x"));
+        ComplexFunction cf3 = new ComplexFunction(Operation.Comp , cf1 , new Polynom("8-x"));
+        cf1.div(cf2);
+        cf3.div(cf2);
+        assertEquals(Operation.Divid.toString() , cf1.getOp().toString());
+        assertEquals("div(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
+        assertEquals("div(comp(div(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
     public void max() {
+        ComplexFunction cf1 = new ComplexFunction(new Monom("4x^5"));
+        ComplexFunction cf2 = new ComplexFunction(new Polynom("-5+44x"));
+        ComplexFunction cf3 = new ComplexFunction(Operation.Comp , cf1 , new Polynom("8-x"));
+        cf1.max(cf2);
+        cf3.max(cf2);
+        assertEquals(Operation.Max.toString() , cf1.getOp().toString());
+        assertEquals("max(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
+        assertEquals("max(comp(max(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
     public void min() {
+        ComplexFunction cf1 = new ComplexFunction(new Monom("4x^5"));
+        ComplexFunction cf2 = new ComplexFunction(new Polynom("-5+44x"));
+        ComplexFunction cf3 = new ComplexFunction(Operation.Comp , cf1 , new Polynom("8-x"));
+        cf1.min(cf2);
+        cf3.min(cf2);
+        assertEquals(Operation.Min.toString() , cf1.getOp().toString());
+        assertEquals("min(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
+        assertEquals("min(comp(min(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
     public void comp() {
-    }
-
-    @Test
-    public void left() {
-    }
-
-    @Test
-    public void right() {
+        ComplexFunction cf1 = new ComplexFunction(new Monom("4x^5"));
+        ComplexFunction cf2 = new ComplexFunction(new Polynom("-5+44x"));
+        ComplexFunction cf3 = new ComplexFunction(Operation.Comp , cf1 , new Polynom("8-x"));
+        cf1.comp(cf2);
+        cf3.comp(cf2);
+        assertEquals(Operation.Comp.toString() , cf1.getOp().toString());
+        assertEquals("comp(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
+        assertEquals("comp(comp(comp(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 }

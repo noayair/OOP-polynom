@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5191437c-5cd8-4bc4-869b-dabb31c2929a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ex1/Parameters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ex1Testing/ComplexFunctionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP-Polynom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP-Polynom.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/ComplexFunctionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/ComplexFunctionTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,21 +66,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.check">
-    <configuration name="check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex1.check" />
-      <module name="OOP-Polynom" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ex1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ComplexFunctionTest.copy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ComplexFunctionTest">
+    <configuration name="ComplexFunctionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOP-Polynom" />
       <extension name="coverage">
         <pattern>
@@ -94,13 +77,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
       <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="copy" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComplexFunctionTest.comp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOP-Polynom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
+      <option name="METHOD_NAME" value="comp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComplexFunctionTest.initFromString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComplexFunctionTest.div" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOP-Polynom" />
       <extension name="coverage">
         <pattern>
@@ -110,13 +108,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
       <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="initFromString" />
+      <option name="METHOD_NAME" value="div" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComplexFunctionTest.plus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComplexFunctionTest.max" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOP-Polynom" />
       <extension name="coverage">
         <pattern>
@@ -126,13 +124,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
       <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="plus" />
+      <option name="METHOD_NAME" value="max" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComplexFunctionTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComplexFunctionTest.min" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOP-Polynom" />
       <extension name="coverage">
         <pattern>
@@ -142,26 +140,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
       <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="testEquals" />
+      <option name="METHOD_NAME" value="min" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ComplexFunctionTest.initFromString" />
-      <item itemvalue="JUnit.ComplexFunctionTest.copy" />
-      <item itemvalue="JUnit.ComplexFunctionTest.testEquals" />
-      <item itemvalue="JUnit.ComplexFunctionTest.plus" />
-      <item itemvalue="Application.check" />
+      <item itemvalue="JUnit.ComplexFunctionTest.div" />
+      <item itemvalue="JUnit.ComplexFunctionTest.max" />
+      <item itemvalue="JUnit.ComplexFunctionTest.min" />
+      <item itemvalue="JUnit.ComplexFunctionTest.comp" />
+      <item itemvalue="JUnit.ComplexFunctionTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.check" />
-        <item itemvalue="JUnit.ComplexFunctionTest.plus" />
-        <item itemvalue="JUnit.ComplexFunctionTest.testEquals" />
-        <item itemvalue="JUnit.ComplexFunctionTest.copy" />
-        <item itemvalue="JUnit.ComplexFunctionTest.initFromString" />
+        <item itemvalue="JUnit.ComplexFunctionTest" />
+        <item itemvalue="JUnit.ComplexFunctionTest.comp" />
+        <item itemvalue="JUnit.ComplexFunctionTest.min" />
+        <item itemvalue="JUnit.ComplexFunctionTest.max" />
+        <item itemvalue="JUnit.ComplexFunctionTest.div" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575995351727</updated>
-      <workItem from="1575995356672" duration="30768000" />
+      <workItem from="1575995356672" duration="34588000" />
     </task>
     <servers />
   </component>
@@ -192,5 +190,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Ex1/check.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

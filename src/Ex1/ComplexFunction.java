@@ -50,6 +50,19 @@ public class ComplexFunction implements function {//hhh
                 throw new IllegalStateException("Unexpected value: " + op);
         }
     }
+
+    public Operation getOp() {
+        return op;
+    }
+
+    public function getLeft() {
+        return left;
+    }
+
+    public function getRight() {
+        return right;
+    }
+
     public double f(double x) {
         if (this.right != null) {
             switch (op) {

@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.*;
 import java.io.*;
 import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonSyntaxException;
 
 public class Functions_GUI implements functions {
     public LinkedList<function> List;
@@ -26,7 +28,6 @@ public class Functions_GUI implements functions {
             f = f.initFromString(line);
             add(f);
         }
-        this.List.clear();
     }
 
     @Override
@@ -103,7 +104,7 @@ public class Functions_GUI implements functions {
             Range rx = new Range(par.getRange_X()[0] , par.getRange_X()[1]);
             Range ry = new Range(par.getRange_Y()[0] , par.getRange_Y()[1]);
             drawFunctions(par.getWidth() , par.getHeight() , rx , ry , par.getResolution());
-        } catch (FileNotFoundException | IllegalArgumentException e) {
+        } catch (FileNotFoundException | IllegalArgumentException | JsonSyntaxException | JsonIOException e) {
             drawFunctions(2000 , 1000 , new Range(-15 , 15) , new Range(-15 , 15) , 1000);
             e.printStackTrace();
         }
