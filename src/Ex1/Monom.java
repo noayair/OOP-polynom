@@ -140,7 +140,12 @@ public class Monom implements function{
 	 */
 	public boolean equals(Object o) {
 		if(o instanceof ComplexFunction ) return o.equals(this);
-		if (!(o instanceof Monom)) return  false;
+		if ((o instanceof Polynom)){
+			Polynom p = (Polynom) o;
+			if(p.theList.size() > 1) return false;
+			Monom p2 = p.theList.getFirst();
+			return p2.equals(this);
+		}
 		Monom m = (Monom) o;
 		if (m.get_power() != this.get_power()) return false;
 		if (m.get_coefficient() == 0 && this.get_coefficient() == 0) return true;

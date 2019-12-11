@@ -50,9 +50,11 @@ public class ComplexFunctionTest {
     public void testEquals() {
         Polynom p = new Polynom("2x");
         ComplexFunction c = new ComplexFunction(Operation.Plus , new Monom("x") , new Monom("x"));
+        ComplexFunction c1 = new ComplexFunction(Operation.Times , new Monom("x") , new Monom("x"));
         Monom m = new Monom("2x");
         assertEquals(true , p.equals(c));
-//        assertEquals(true , m.equals(p));
+        assertEquals(true , m.equals(p));
+        assertNotEquals(true , c.equals(c1));
     }
 
     @Test

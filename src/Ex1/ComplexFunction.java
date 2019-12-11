@@ -24,7 +24,7 @@ public class ComplexFunction implements function {//hhh
     public void set_left(function left) {
         this.left=left;
     }
-    public ComplexFunction(function f1, String op, function f2) {
+    public ComplexFunction(String op , function f1 , function f2) {
         this.left = f1;
         this.right = f2;
         switch (op) {
