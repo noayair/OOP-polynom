@@ -37,7 +37,6 @@ public class Functions_GUI implements functions {
         String line;
         BufferedReader reader = new BufferedReader(new FileReader(file));
         while ((line = reader.readLine()) != null) {
-            //System.out.println(line);
             function f = new ComplexFunction(new Monom(0,0));
             f = f.initFromString(line);
             add(f);

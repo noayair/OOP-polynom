@@ -20,7 +20,6 @@ public class ComplexFunction implements complex_function {
         }
         this.left = f.copy();
         this.op = Operation.None;
-        //this.right = null;
     }
 
     /** Constructor that get operation, left function and right function.
@@ -219,13 +218,6 @@ public class ComplexFunction implements complex_function {
             r = this.right.copy();
         }
         return new ComplexFunction(this.op , l , r);
-//        ComplexFunction cf=new ComplexFunction(new Monom(0,0));
-//
-//            cf.right = this.right.copy();
-//        }
-//        cf.left = this.left.copy();
-//        cf.op = this.op;
-//        return cf;
     }
 
     /**
