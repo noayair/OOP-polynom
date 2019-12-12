@@ -63,7 +63,7 @@ public class ComplexFunctionTest {
         cf3.plus(cf2);
         assertEquals(Operation.Plus.toString() , cf1.getOp().toString());
         assertEquals("plus(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
-        assertEquals("plus(comp(plus(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
+        assertEquals("plus(comp(4.0x^5,8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
@@ -75,7 +75,7 @@ public class ComplexFunctionTest {
         cf3.mul(cf2);
         assertEquals(Operation.Times.toString() , cf1.getOp().toString());
         assertEquals("mul(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
-        assertEquals("mul(comp(mul(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
+        assertEquals("mul(comp(4.0x^5,8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
@@ -87,7 +87,7 @@ public class ComplexFunctionTest {
         cf3.div(cf2);
         assertEquals(Operation.Divid.toString() , cf1.getOp().toString());
         assertEquals("div(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
-        assertEquals("div(comp(div(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
+        assertEquals("div(comp(4.0x^5,8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
@@ -99,7 +99,7 @@ public class ComplexFunctionTest {
         cf3.max(cf2);
         assertEquals(Operation.Max.toString() , cf1.getOp().toString());
         assertEquals("max(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
-        assertEquals("max(comp(max(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
+        assertEquals("max(comp(4.0x^5,8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
@@ -111,7 +111,7 @@ public class ComplexFunctionTest {
         cf3.min(cf2);
         assertEquals(Operation.Min.toString() , cf1.getOp().toString());
         assertEquals("min(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
-        assertEquals("min(comp(min(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
+        assertEquals("min(comp(4.0x^5,8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 
     @Test
@@ -123,6 +123,6 @@ public class ComplexFunctionTest {
         cf3.comp(cf2);
         assertEquals(Operation.Comp.toString() , cf1.getOp().toString());
         assertEquals("comp(4.0x^5,-5.0x^0+44.0x^1)" , cf1.toString());
-        assertEquals("comp(comp(comp(4.0x^5,-5.0x^0+44.0x^1),8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
+        assertEquals("comp(comp(4.0x^5,8.0x^0-1.0x^1),-5.0x^0+44.0x^1)" , cf3.toString());
     }
 }

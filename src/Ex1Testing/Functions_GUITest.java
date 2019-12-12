@@ -34,7 +34,6 @@ public class Functions_GUITest {
         for (int i = 0; i < fg1.size(); i++) {
             assertEquals(fg1.List.get(i).toString() , fg2.List.get(i).toString());
         }
-        fg1.drawFunctions(2000 , 1000 , new Range(-20,20) , new Range(-20,20) , 700);
-        //fg2.drawFunctions("GUI_params .txt");
+        fg2.drawFunctions("GUI_params .txt");
     }
 }

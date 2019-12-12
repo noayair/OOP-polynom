@@ -15,26 +15,36 @@ public class ComplexFunction implements complex_function {
      *
      */
     public ComplexFunction(function f){
-        this.left = f;
+        if (f == null){
+            throw new RuntimeException("function cant be null");
+        }
+        this.left = f.copy();
         this.op = Operation.None;
-        this.right = null;
+        //this.right = null;
     }
 
     /** Constructor that get operation, left function and right function.
      *
      */
     public ComplexFunction(Operation op, function f1, function f2) {
-        this.left=f1;
+        if(f1 == null){
+            throw new RuntimeException("function cant be null");
+        }
+        this.left=f1.copy();
         this.op=op;
-        this.right=f2;
+        if(f2 == null){
+            this.right = null;
+        }else {
+            this.right = f2.copy();
+        }
     }
 
     /** constructor that get string of operation, left function and right function.
      *
      */
     public ComplexFunction(String op , function f1 , function f2) {
-        this.left = f1;
-        this.right = f2;
+        this.left = f1.copy();
+        this.right = f2.copy();
         switch (op) {
             case "plus":
                 this.op = Operation.Plus;
@@ -201,11 +211,21 @@ public class ComplexFunction implements complex_function {
      * @return the new complex_function.
      */
     public function copy() {
-        ComplexFunction cf=new ComplexFunction(new Monom(0,0));
-        cf.right = this.right;
-        cf.left = this.left;
-        cf.op = this.op;
-        return cf;
+        function l = this.left.copy();
+        function r;
+        if (this.right == null){
+            return new ComplexFunction(l);
+        }else{
+            r = this.right.copy();
+        }
+        return new ComplexFunction(this.op , l , r);
+//        ComplexFunction cf=new ComplexFunction(new Monom(0,0));
+//
+//            cf.right = this.right.copy();
+//        }
+//        cf.left = this.left.copy();
+//        cf.op = this.op;
+//        return cf;
     }
 
     /**

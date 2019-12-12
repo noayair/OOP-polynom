@@ -4,7 +4,7 @@
     <list default="true" id="5191437c-5cd8-4bc4-869b-dabb31c2929a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Monom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Monom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/ComplexFunctionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/ComplexFunctionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +82,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComplexFunctionTest.f" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComplexFunctionTest.div" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOP-Polynom" />
       <extension name="coverage">
         <pattern>
@@ -92,23 +92,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
       <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="f" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ComplexFunctionTest.initFromString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OOP-Polynom" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ex1Testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="initFromString" />
+      <option name="METHOD_NAME" value="div" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Functions_GUITest.init_save_drawTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MonomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOP-Polynom" />
       <extension name="coverage">
         <pattern>
@@ -138,27 +122,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.Functions_GUITest" />
-      <option name="METHOD_NAME" value="init_save_drawTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolynomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOP-Polynom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.PolynomTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ComplexFunctionTest.f" />
-      <item itemvalue="JUnit.ComplexFunctionTest.initFromString" />
       <item itemvalue="JUnit.ComplexFunctionTest" />
+      <item itemvalue="JUnit.ComplexFunctionTest.div" />
+      <item itemvalue="JUnit.MonomTest" />
+      <item itemvalue="JUnit.PolynomTest" />
       <item itemvalue="JUnit.Functions_GUITest" />
-      <item itemvalue="JUnit.Functions_GUITest.init_save_drawTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Functions_GUITest" />
+        <item itemvalue="JUnit.PolynomTest" />
+        <item itemvalue="JUnit.MonomTest" />
         <item itemvalue="JUnit.ComplexFunctionTest" />
-        <item itemvalue="JUnit.Functions_GUITest.init_save_drawTest" />
-        <item itemvalue="JUnit.ComplexFunctionTest.initFromString" />
-        <item itemvalue="JUnit.ComplexFunctionTest.f" />
+        <item itemvalue="JUnit.ComplexFunctionTest.div" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575995351727</updated>
-      <workItem from="1575995356672" duration="57228000" />
+      <workItem from="1575995356672" duration="59990000" />
     </task>
     <servers />
   </component>
