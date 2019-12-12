@@ -8,6 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PolynomTest {
+
     @Test
     public void f() {
         Polynom p1 = new Polynom("x");

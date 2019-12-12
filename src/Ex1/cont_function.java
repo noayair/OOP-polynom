@@ -1,7 +1,7 @@
 package Ex1;
 /**
  * The interface represents a continuance function 
- * @author Boaz
+ * @author Noa yair and Oriya kronfeld
  *
  */ 
 public interface cont_function extends function{

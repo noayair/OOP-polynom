@@ -13,29 +13,26 @@ public class ComplexFunctionTest {
     public void f() {
         Polynom f1 = new Polynom("5x^2+3");
         Monom f2 = new Monom("-x");
-        ComplexFunction cf1 = new ComplexFunction(Operation.Plus, f1 , f2);
-        ComplexFunction cf2 = new ComplexFunction(Operation.Times , cf1 , f2);
-        ComplexFunction cf3 = new ComplexFunction(Operation.Max , cf1 , cf2);
+        ComplexFunction cf1 = new ComplexFunction("plus", f1 , f2);
+        ComplexFunction cf2 = new ComplexFunction("div" , cf1 , f2);
+        ComplexFunction cf3 = new ComplexFunction("max" , cf1 , cf2);
         assertEquals(123 , cf1.f(5) , 0.00000001);
-        assertEquals(-135 , cf2.f(3) , 0.00000001);
-        assertEquals(4.75 , cf3.f(-0.5) , 0.0000001);
+        assertEquals(-15 , cf2.f(3) , 0.00000001);
+        assertEquals(9.5 , cf3.f(-0.5) , 0.0000001);
     }
 
     @Test
     public void initFromString() {
-//        ComplexFunction cf1 = new ComplexFunction(new Monom(0,0));
-//        ComplexFunction cf2 = new ComplexFunction(new Monom(0,0));
-//        ComplexFunction cf3 = new ComplexFunction(new Monom(0,0));
         String s1 = "3+4x-5x^6";
         String s2 = "mul(1.4,5x+3x^2)";
         String s3 = "min(min(div(plus(x,2x^2),3x^3),4x^4),5x^5)";
         String s4 = "div(plus(x,2x^2),3x^3)";
-        ComplexFunction c1 = new ComplexFunction(Operation.Plus , new Monom("x") , new Monom("2x^2"));
-        ComplexFunction c2 = new ComplexFunction(Operation.Divid , c1 , new Monom("3x^3"));
-        ComplexFunction c3 = new ComplexFunction(Operation.Min , c2 , new Monom("4x^4"));
-        ComplexFunction c4 = new ComplexFunction(Operation.Min , c3 , new Monom("5x^5"));
-        assertEquals(new ComplexFunction(Operation.None , new Polynom(s1) , null) , empty.initFromString(s1));
-        assertEquals(new ComplexFunction(Operation.Times , new Monom("1.4") , new Polynom("5x+3x^2")) , empty.initFromString(s2));
+        ComplexFunction c1 = new ComplexFunction("plus" , new Monom("x") , new Monom("2x^2"));
+        ComplexFunction c2 = new ComplexFunction("div" , c1 , new Monom("3x^3"));
+        ComplexFunction c3 = new ComplexFunction("min" , c2 , new Monom("4x^4"));
+        ComplexFunction c4 = new ComplexFunction("min" , c3 , new Monom("5x^5"));
+        assertEquals(new ComplexFunction(new Polynom(s1)) , empty.initFromString(s1));
+        assertEquals(new ComplexFunction("mul" , new Monom("1.4") , new Polynom("5x+3x^2")) , empty.initFromString(s2));
         assertEquals(c4.toString() , empty.initFromString(s3).toString());
     }
 

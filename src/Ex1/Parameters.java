@@ -1,5 +1,8 @@
 package Ex1;
 
+/**
+ * This class is for help to get and set the parameters for the json function.
+ */
 public class Parameters {
     private int Width;
     private int Height;

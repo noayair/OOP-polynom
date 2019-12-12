@@ -9,15 +9,29 @@ import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
+/**
+ * This class can hold a collection of functions,
+ * write and read the functions to file and show them on GUI.
+ *
+ * @author Noa Yair and Oriya Kronfeld
+ */
 public class Functions_GUI implements functions {
     public LinkedList<function> List;
     private ComplexFunction f = new ComplexFunction(new Monom(0,0));
     public static Color[] Colors = {Color.blue, Color.cyan,
             Color.MAGENTA, Color.ORANGE, Color.red, Color.GREEN, Color.PINK};
 
+    /**
+     * Constructor
+     */
     public Functions_GUI (){
         this.List = new LinkedList<function>();
     }
+
+    /**
+     * Read from file.
+     * @param file - the file name
+     */
     @Override
     public void initFromFile(String file) throws IOException {
         String line;
@@ -30,6 +44,10 @@ public class Functions_GUI implements functions {
         }
     }
 
+    /**
+     * Save to file.
+     * @param file - the file name
+     */
     @Override
     public void saveToFile(String file) throws IOException {
         Iterator<function> it = this.List.iterator();
@@ -39,12 +57,18 @@ public class Functions_GUI implements functions {
             writer.append(s + "\n");
             writer.close();
         }
-        //this.List.clear();
-        }
+    }
 
+    /**
+     * Function that get parameters and draw the functions.
+     * @param width - the width of the window - in pixels
+     * @param height - the height of the window - in pixels
+     * @param rx - the range of the horizontal axis
+     * @param ry - the range of the vertical axis
+     * @param resolution - the number of samples with in rx: the X_step = rx/resulution
+     */
     @Override
     public void drawFunctions(int width, int height, Range rx, Range ry, int resolution) {
-        //int n = resolution;
         StdDraw.setCanvasSize(width, height);
         int size = this.List.size();
         double[] x = new double[resolution+1];
@@ -60,13 +84,9 @@ public class Functions_GUI implements functions {
         }
         StdDraw.setXscale(rx.get_min(), rx.get_max());
         StdDraw.setYscale(ry.get_min(), ry.get_max());
-
-
-        // plot the approximation to the function
         for(int a=0;a<size;a++) {
             int c = a%Colors.length;
             StdDraw.setPenColor(Colors[c]);
-
             System.out.println(a+") "+Colors[a]+"  f(x)= "+this.List.get(a));
             for (int i = 0; i < resolution; i++) {
                 StdDraw.line(x[i], yy[a][i], x[i+1], yy[a][i+1]);
@@ -95,6 +115,10 @@ public class Functions_GUI implements functions {
         }
     }
 
+    /**
+     * Function that read the parameters from a json file.
+     * @param json_file - the file with all the parameters for the GUI window.
+     */
     @Override
     public void drawFunctions(String json_file) {
         Gson g = new Gson();

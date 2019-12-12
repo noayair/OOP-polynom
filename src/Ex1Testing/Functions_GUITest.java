@@ -31,7 +31,7 @@ public class Functions_GUITest {
         fg1.saveToFile("our_file.txt");
         fg2.initFromFile("our_file.txt");
         for (int i = 0; i < fg1.size(); i++) {
-            assertEquals(fg1.List.get(i) , fg2.List.get(i));
+            assertEquals(fg1.List.get(i).toString() , fg2.List.get(i).toString());
         }
         fg2.drawFunctions("GUI_params .txt");
     }

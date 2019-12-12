@@ -29,7 +29,7 @@ import java.util.Iterator;
  *													
  * 
  * 
- * @author ben-moshe
+ * @author Noa Yair and Oriya Kronfeld
  *
  */
 public interface Polynom_able extends cont_function{
