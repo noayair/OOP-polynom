@@ -346,17 +346,4 @@ public class ComplexFunction implements complex_function {
                 throw new IllegalStateException("Unexpected value: " + op);
         }
     }
-
-//    public static void main(String[] args) {
-//        ComplexFunction f = new ComplexFunction(new Monom(0,0));
-//        f = (ComplexFunction) f.initFromString("plus(plus(0,0),0)");
-//        System.out.println(f.toString());
-//
-//            Polynom polynom = new Polynom ("2x^3 + 4x");
-//            ComplexFunction complexFunction = new ComplexFunction("plus",polynom,polynom);
-//            polynom.multiply(new Monom ("2"));
-//            System.out.println(complexFunction.toString());
-//        System.out.println(polynom.toString());
-//
-//    }
 }

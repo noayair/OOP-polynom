@@ -3,6 +3,7 @@ package Ex1Testing;
 import Ex1.ComplexFunction;
 import Ex1.Functions_GUI;
 import Ex1.Monom;
+import Ex1.Range;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -33,6 +34,7 @@ public class Functions_GUITest {
         for (int i = 0; i < fg1.size(); i++) {
             assertEquals(fg1.List.get(i).toString() , fg2.List.get(i).toString());
         }
-        fg2.drawFunctions("GUI_params .txt");
+        fg1.drawFunctions(2000 , 1000 , new Range(-20,20) , new Range(-20,20) , 700);
+        //fg2.drawFunctions("GUI_params .txt");
     }
 }

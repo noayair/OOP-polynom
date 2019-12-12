@@ -4,16 +4,8 @@
     <list default="true" id="5191437c-5cd8-4bc4-869b-dabb31c2929a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Parameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Polynom_able.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Polynom_able.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Range.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/check.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/cont_function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/cont_function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/ComplexFunctionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/ComplexFunctionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/Monom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Monom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575995351727</updated>
-      <workItem from="1575995356672" duration="51257000" />
+      <workItem from="1575995356672" duration="57228000" />
     </task>
     <servers />
   </component>

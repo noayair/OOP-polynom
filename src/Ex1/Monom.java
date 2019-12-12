@@ -29,6 +29,41 @@ public class Monom implements function{
 	public Monom(Monom ot) {
 		this(ot.get_coefficient(), ot.get_power());
 	}
+
+	/**
+	 * Monom(String) function that make monom from String That the user puts in
+	 *
+	 */
+	public Monom(String s) {
+		try {
+			int t = s.indexOf('x');
+			if (t == -1) {
+				set_coefficient(Double.parseDouble(s));
+				set_power(0);
+			}else if (t == 0){
+				set_coefficient(1);
+				if (s.charAt(s.length()-1) == 'x') {
+					set_power(1);
+				}else {
+					set_power(Integer.parseInt(s.substring(t+2)));
+				}
+			}else {
+				if (s.charAt(0) == '-' && s.charAt(1) == 'x') {
+					set_coefficient(-1);
+				}else {
+					set_coefficient(Double.parseDouble(s.substring(0, t)));
+				}
+				if (t == s.length()-1) {
+					set_power(1);
+				}else {
+					set_power(Integer.parseInt(s.substring(t+2)));
+				}
+			}
+		}catch(Exception E) {
+			System.out.println("Error - the monom is not correct");
+		}
+	}
+
 	/**
 	 * getter of coefficient
 	 * @return this coefficient
@@ -69,39 +104,7 @@ public class Monom implements function{
 	 */
 	public boolean isZero() {return this.get_coefficient() == 0;}
 
-	/**
-	 * Monom(String) function that make monom from String That the user puts in
-	 *
-	 */
-	public Monom(String s) {
-		try {
-			int t = s.indexOf('x');
-			if (t == -1) {
-				set_coefficient(Double.parseDouble(s));
-				set_power(0);
-			}else if (t == 0){
-				set_coefficient(1);
-				if (s.charAt(s.length()-1) == 'x') {
-					set_power(1);
-				}else {
-					set_power(Integer.parseInt(s.substring(t+2)));
-				}
-			}else {
-				if (s.charAt(0) == '-' && s.charAt(1) == 'x') {
-					set_coefficient(-1);
-				}else {
-					set_coefficient(Double.parseDouble(s.substring(0, t)));
-				}
-				if (t == s.length()-1) {
-					set_power(1);
-				}else {
-					set_power(Integer.parseInt(s.substring(t+2)));
-				}
-			}
-		}catch(Exception E) {
-			System.out.println("Error - the monom is not correct");
-		}
-	}
+
 	/**
 	 * addition between two monoms that have the same power
 	 * @param m the monom that we add to the original monom
